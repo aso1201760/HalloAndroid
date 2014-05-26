@@ -9,6 +9,7 @@
     tools:context=".MainActivity" >
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
@@ -18,7 +19,7 @@
             android:layout_height="wrap_content" >
 
             <TableRow
-                android:id="@+id/tableRow1"
+                android:id="@+id/edtFirst"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
 
@@ -35,11 +36,10 @@
 
                     <requestFocus />
                 </EditText>
-
             </TableRow>
 
             <TableRow
-                android:id="@+id/tableRow2"
+                android:id="@+id/edtFamily"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
 
@@ -53,19 +53,6 @@
                     android:id="@+id/editText2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tableRow3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/tableRow4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
             </TableRow>
 
             <LinearLayout
@@ -73,7 +60,7 @@
                 android:layout_height="wrap_content" >
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/btnOK"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="OK" />
@@ -83,11 +70,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Cancel" />
-
             </LinearLayout>
-
         </TableLayout>
-
     </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="49dp"
+        android:columnCount="1" >
+
+        <TextView
+            android:id="@+id/txvMsg"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="0"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </GridLayout>
 
 </RelativeLayout>
